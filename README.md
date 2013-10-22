@@ -122,6 +122,7 @@ However, when this occurs, you will probably want to at least re-center the moda
 These are the supported options and their default values:
 
     $.modal.defaults = {
+      showOverlay: true,      // Enable/disable overlay
       overlay: "#000",        // Overlay color
       opacity: 0.75,          // Overlay opacity
       zIndex: 1,              // Overlay z-index.

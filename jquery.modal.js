@@ -84,7 +84,9 @@
         background: this.options.overlay,
         opacity: initialOpacity
       });
-      this.$body.append(this.blocker);
+      if (this.options.showOverlay) {
+        this.$body.append(this.blocker);
+      }
       if(this.options.doFade) {
         this.blocker.animate({opacity: this.options.opacity}, this.options.fadeDuration);
       }
@@ -177,6 +179,7 @@
   };
 
   $.modal.defaults = {
+    showOverlay: true,
     overlay: "#000",
     opacity: 0.75,
     zIndex: 1,
